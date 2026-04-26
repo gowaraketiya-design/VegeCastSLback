@@ -23,7 +23,7 @@ const exportCache = new Map();
 // Middleware
 app.use(cors({
   origin: [
-    "https://vegecastsl-front.vercel.app", // 
+    "https://vegecastslfront.vercel.app", // 
     "http://localhost:3000" // for local dev
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
