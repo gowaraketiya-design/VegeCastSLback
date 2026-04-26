@@ -1,0 +1,31 @@
+# pandas
+# numpy
+# statsmodels
+# scipy
+# openpyxl
+# mysql-connector-python
+# xgboost==3.2.0
+
+
+# Core
+numpy==1.26.4
+pandas==2.2.2
+
+# Machine Learning
+scikit-learn==1.7.2
+xgboost==3.2.0
+
+# Deep Learning (LSTM)
+tensorflow==2.16.1
+
+# Time Series
+statsmodels==0.14.2
+
+# File handling
+openpyxl==3.1.2
+
+# Utilities
+joblib==1.4.2
+
+# Optional (safe to include)
+matplotlib==3.9.0
