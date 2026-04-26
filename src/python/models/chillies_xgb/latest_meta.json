@@ -1,0 +1,20 @@
+{
+  "target": "Import Chillies",
+  "features": [
+    "Average Exchange Rate",
+    "Import Fuel Price",
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_5",
+    "lag_7",
+    "roll_mean_3",
+    "roll_mean_5",
+    "roll_mean_7",
+    "dayofweek",
+    "month",
+    "dayofmonth"
+  ],
+  "model_type": "XGBOOST",
+  "xgboost_version": "3.2.0"
+}
