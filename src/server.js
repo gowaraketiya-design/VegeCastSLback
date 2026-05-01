@@ -26,7 +26,7 @@ app.use(cors({
     "https://vegecastslfront.vercel.app", // 
     "http://localhost:3000" // for local dev
   ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
