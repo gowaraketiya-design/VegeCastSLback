@@ -30,6 +30,12 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://vegecastslfront.vercel.app");
+  res.header("Access-Control-Allow-Credentials", "true");
+  next();
+});
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
@@ -1568,9 +1574,19 @@ app.get("/api/public/explorer", async (req, res) => {
 
 
 // Global error handler (keep last)
+// app.use((err, req, res, next) => {
+//   console.error(err);
+//   res.status(500).json({ ok: false, error: "Internal Server Error" });
+// });
 app.use((err, req, res, next) => {
   console.error(err);
-  res.status(500).json({ ok: false, error: "Internal Server Error" });
+
+  res.setHeader("Access-Control-Allow-Origin", "https://vegecastslfront.vercel.app");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+
+  res.status(500).json({
+    error: "Internal Server Error"
+  });
 });
 
 const PORT = process.env.PORT || 5000;
